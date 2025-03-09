@@ -1,0 +1,22 @@
+{
+    "name": "PurpleDry - Online Laundry Service",
+    "short_name": "PurpleDry",
+    "description": "Fast, reliable laundry service with doorstep pickup and delivery in Hyderabad.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#6C4664",
+    "icons": [
+      {
+        "src": "/purpledry.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/purpledry.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  

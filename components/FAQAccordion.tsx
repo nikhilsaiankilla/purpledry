@@ -25,29 +25,37 @@ const FAQAccordion: React.FC = () => {
 
   return (
     <section className="w-full py-16 bg-gray-50 px-4 sm:px-8 md:px-32">
-      <h1 className="text-center font-bold text-2xl text-primary text-wrap">Frequently Asked Questions</h1>
+      <h1 className="text-center font-bold text-2xl text-primary">Frequently Asked Questions</h1>
       <div className="max-w-3xl mx-auto mt-8 space-y-4 px-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="bg-white rounded-lg">
-            {/* Question */}
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center p-4 font-medium text-left text-primary focus:outline-none"
-            >
-              <span>{faq.question}</span>
-              {openIndex === index ? <ChevronUp /> : <ChevronDown />}
-            </button>
+        {faqs.map((faq, index) => {
+          const isOpen = openIndex === index;
+          return (
+            <div key={index} className="bg-white rounded-lg shadow-sm">
+              {/* Question Button */}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex justify-between items-center p-4 font-medium text-left text-primary focus:outline-none"
+                aria-expanded={isOpen}
+                aria-controls={`faq-${index}`}
+              >
+                <span>{faq.question}</span>
+                {isOpen ? <ChevronUp /> : <ChevronDown />}
+              </button>
 
-            {/* Animated Answer */}
-            <div
-              className={`transition-all duration-300 overflow-hidden ${
-                openIndex === index ? "max-h-40 opacity-100 p-4 border-t border-gray-200" : "max-h-0 opacity-0"
-              }`}
-            >
-              <p className="text-gray-600">{faq.answer}</p>
+              {/* Collapsible Answer with Animation */}
+              <div
+                id={`faq-${index}`}
+                className={`overflow-hidden transition-all duration-300 ${
+                  isOpen ? "max-h-40 opacity-100 p-4 border-t border-gray-200" : "max-h-0 opacity-0"
+                }`}
+                role="region"
+                aria-hidden={!isOpen}
+              >
+                <p className="text-gray-600">{faq.answer}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
