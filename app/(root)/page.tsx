@@ -6,6 +6,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 import ProcessSection from "@/components/ProcessSection";
 import FAQAccordion from "@/components/FAQAccordion";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -110,7 +111,7 @@ export default function Home() {
       <footer className="bg-primary py-10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Company Section */}
             <div>
               <h2 className="text-2xl font-bold text-white">Purple Dry</h2>
@@ -124,16 +125,16 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-white">Quick Links</h3>
               <ul className="mt-3 space-y-2">
                 <li>
-                  <a href="/" className="text-white">Home</a>
+                  <Link href="/" className="text-white">Home</Link>
                 </li>
                 <li>
-                  <a href="/services" className="text-white">Services</a>
+                  <Link href="/services" className="text-white">Home</Link>
                 </li>
                 <li>
-                  <a href="/pricing" className="text-white">Pricing</a>
+                  <Link href="/pricing" className="text-white">Pricing</Link>
                 </li>
                 <li>
-                  <a href="/contact" className="text-white">Contact</a>
+                  <Link href="/contact" className="text-white">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -142,18 +143,10 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold text-white">Follow Us</h3>
               <div className="mt-3 flex space-x-4">
-                <a href="#" className="text-white" aria-label="Follow us on Facebook">
-                  <Facebook />
-                </a>
-                <a href="#" className="text-white" aria-label="Follow us on Twitter">
-                  <Twitter />
-                </a>
-                <a href="#" className="text-white" aria-label="Follow us on Instagram">
-                  <Instagram />
-                </a>
-                <a href="#" className="text-white" aria-label="Follow us on LinkedIn">
-                  <Linkedin />
-                </a>
+                <Link href="#" className="text-white" aria-label="Follow us on Facebook"> <Facebook /></Link>
+                <Link href="#" className="text-white" aria-label="Follow us on Twitter"> <Twitter /></Link>
+                <Link href="#" className="text-white" aria-label="Follow us on Instagram"> <Instagram /></Link>
+                <Link href="#" className="text-white" aria-label="Follow us on Linkedin"> <Linkedin /></Link>
               </div>
             </div>
           </div>

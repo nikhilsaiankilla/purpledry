@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface ButtonProps {
@@ -14,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   ariaLabel,
 }) => {
   return (
-    <a
+    <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -22,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
       className={`px-3 py-2 rounded-md bg-primary text-white text-sm font-normal hover:bg-primary cursor-pointer inline-block ${className}`}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
