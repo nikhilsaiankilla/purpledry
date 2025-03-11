@@ -86,6 +86,42 @@ export default function Home() {
         </Button>
       </section>
 
+      {/* <section className="w-full bg-primary h-screen mt-20 flex items-center justify-center flex-col px-6 relative">
+        <div className="relative w-[500px] h-[500px] flex items-center justify-center">
+          <Image
+            src="/mobileMockup.png"
+            alt="PurpleDry mobile app mockup"
+            width={400}
+            height={400}
+            className="w-[300px] md:w-[400px] lg:w-[500px] aspect-square"
+          />
+
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-primary p-2 rounded-md shadow-md">
+            Super Fast Service
+          </div>
+
+          <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-white text-primary p-2 rounded-md shadow-md">
+            Affordable Service
+          </div>
+
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white text-primary p-2 rounded-md shadow-md">
+            Doorstep Pickup & Delivery
+          </div>
+
+          <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-white text-primary p-2 rounded-md shadow-md">
+            Quality Assurance
+          </div>
+        </div>
+
+        <Button
+          href="https://play.google.com/store/apps/details?id=com.phonepe.app"
+          className="mt-10 bg-white text-primary hover:text-white hover:bg-primary hover:outline-white outline-1"
+          ariaLabel="Download PurpleDry App"
+        >
+          Download App
+        </Button>
+      </section> */}
+
       <TestimonialSection />
       <ProcessSection />
 
