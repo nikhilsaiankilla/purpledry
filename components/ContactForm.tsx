@@ -53,7 +53,7 @@ const ContactForm = () => {
         ))}
         <Button
           href="#"
-          className="w-full bg-primary text-white py-3 rounded-lg text-lg font-semibold shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          className="w-full bg-primary text-white hover:text-primary! outline-1 hover:bg-transparent hover:outline-primary! py-3 rounded-lg text-lg font-semibold shadow-md transition-transform duration-300"
           ariaLabel="Submit Partner Form"
         >
           Submit

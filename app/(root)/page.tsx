@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Button from "@/components/Button";
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import TestimonialSection from "@/components/TestimonialSection";
 import ProcessSection from "@/components/ProcessSection";
 import FAQAccordion from "@/components/FAQAccordion";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import Link from "next/link";
+import Footer from "@/components/Footer";
+
 
 export default function Home() {
   return (
@@ -60,8 +59,6 @@ export default function Home() {
         />
       </Head>
 
-      <Navbar />
-
       {/* Hero Section */}
       <section className="w-full min-h-[60vh] flex items-center justify-center flex-col gap-4 mt-19 px-4 sm:px-8 md:px-32">
         <h1 className="w-full max-w-3xl text-3xl sm:text-4xl md:text-5xl font-bold text-center">
@@ -84,7 +81,7 @@ export default function Home() {
           height={400}
           className="w-[500px] aspect-square"
         />
-        <Button href="https://play.google.com/store/apps/details?id=your-app-id" className="bg-white text-primary!" ariaLabel="Download the PurpleDry App">
+        <Button href="https://play.google.com/store/apps/details?id=com.phonepe.app" className="mt-6 bg-white! text-primary! hover:text-white! hover:bg-primary! hover:outline-white! outline-1" ariaLabel="Become a PurpleDry Partner">
           Download App
         </Button>
       </section>
@@ -93,7 +90,7 @@ export default function Home() {
       <ProcessSection />
 
       {/* Partner Section */}
-      <section className="w-full py-6 px-4 sm:px-8 md:px-32 mt-10 flex flex-col items-center justify-center">
+      <section className="w-full py-6 px-4 sm:px-8 md:px-32 flex flex-col items-center justify-center my-16">
         <h2 className="text-center font-bold text-2xl text-primary">
           Become a Purple Dry Partner!
         </h2>
@@ -107,56 +104,8 @@ export default function Home() {
 
       <FAQAccordion />
 
-      {/* Footer Section */}
-      <footer className="bg-primary py-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            {/* Company Section */}
-            <div>
-              <h2 className="text-2xl font-bold text-white">Purple Dry</h2>
-              <p className="mt-2 text-white">
-                The best laundry service at your doorstep. Fast, reliable, and quality assured.
-              </p>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-              <ul className="mt-3 space-y-2">
-                <li>
-                  <Link href="/" className="text-white">Home</Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-white">Home</Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="text-white">Pricing</Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-white">Contact</Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Social Media */}
-            <div>
-              <h3 className="text-lg font-semibold text-white">Follow Us</h3>
-              <div className="mt-3 flex space-x-4">
-                <Link href="#" className="text-white" aria-label="Follow us on Facebook"> <Facebook /></Link>
-                <Link href="#" className="text-white" aria-label="Follow us on Twitter"> <Twitter /></Link>
-                <Link href="#" className="text-white" aria-label="Follow us on Instagram"> <Instagram /></Link>
-                <Link href="#" className="text-white" aria-label="Follow us on Linkedin"> <Linkedin /></Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Copyright Section */}
-          <div className="border-t border-white mt-8 pt-4 text-center text-sm text-white">
-            © {new Date().getFullYear()} Purple Dry. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -17,10 +17,9 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <Link
       href={href}
-      target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className={`px-3 py-2 rounded-md bg-primary text-white text-sm font-normal hover:bg-primary cursor-pointer inline-block ${className}`}
+      className={`px-3 py-2 rounded-md bg-primary text-white hover:bg-transparent outline-1 hover:text-primary hover:outline-primary text-sm font-normal transition-all duration-150 ease-in-out cursor-pointer inline-block ${className}`}
     >
       {children}
     </Link>

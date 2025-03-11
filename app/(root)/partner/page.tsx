@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 import Button from "@/components/Button";
 import TestimonialSection from "@/components/TestimonialSection";
-import Navbar from "@/components/Navbar";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 const PartnerPage = () => {
     return (
@@ -53,15 +53,13 @@ const PartnerPage = () => {
                 />
             </Head>
 
-            <Navbar />
-
             {/* Hero Section */}
             <section className="w-full bg-primary text-white py-16 px-6 text-center">
                 <h1 className="text-4xl font-bold">Partner with PurpleDry</h1>
                 <p className="mt-4 text-lg max-w-3xl mx-auto">
                     Join our network of professional dhobis in Hyderabad and grow your business with a steady income and easy order management.
                 </p>
-                <Button href="#contact" className="mt-6 bg-white text-primary" ariaLabel="Become a PurpleDry Partner">
+                <Button href="#contact" className="mt-6 bg-white! text-primary! hover:text-white! hover:bg-primary! hover:outline-white! outline-1" ariaLabel="Become a PurpleDry Partner">
                     Become a Partner
                 </Button>
             </section>
@@ -107,7 +105,9 @@ const PartnerPage = () => {
             <TestimonialSection />
 
             {/* Contact Form */}
-            <ContactForm/>
+            <ContactForm />
+
+            <Footer />
         </div>
     );
 };
