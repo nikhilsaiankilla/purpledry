@@ -3,3 +3,9 @@
 @theme {
   --color-primary: #6C4664;
 }
+
+@layer {
+  .padding {
+    @apply px-4 sm:px-8 md:px-32;
+  }
+}

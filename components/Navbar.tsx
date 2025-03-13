@@ -9,6 +9,16 @@ import Button from "./Button";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Define dynamic routes
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "Why Choose Us?", path: "/about" },
+    { label: "Join as Dhobi", path: "/partner" },
+    { label: "Our Service Providers", path: "/serviceProviders" },
+    { label: "Contact Us", path: "/about" },
+  ];
+
   return (
     <nav className="flex py-3 items-center justify-between relative bg-white w-full px-4 sm:px-8 md:px-32" role="navigation">
       {/* Logo */}
@@ -16,9 +26,9 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center gap-4 capitalize">
-        {["Home", "Pricing", "Why Choose Us?", "Join as Dhobi", "About Us", "Contact Us"].map((item) => (
-          <Link href="#" key={item} className="text-sm font-normal hover:text-primary transition duration-300">
-            {item}
+        {navItems.map((item) => (
+          <Link key={item.label} href={item.path} className="text-sm font-normal hover:text-primary transition duration-300">
+            {item.label}
           </Link>
         ))}
       </div>
@@ -26,7 +36,7 @@ const Navbar = () => {
       {/* CTA Button for App Download (Always Visible on Desktop) */}
       <div className="hidden md:block">
         <Button href="https://play.google.com/store/apps/details?id=your-app-id" ariaLabel="Download the PurpleDry App">
-          Download App
+          Book Service
         </Button>
       </div>
 
@@ -44,15 +54,15 @@ const Navbar = () => {
         className={`fixed top-0 left-0 w-full h-screen bg-primary flex flex-col items-center justify-center gap-6 text-lg transition-transform duration-500 ease-in-out text-white ${isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
       >
-        {["Home", "Pricing", "Why Choose Us?", "Join as Dhobi", "About Us", "Contact Us"].map((item) => (
-          <Link href="#" key={item} className="text-white hover:opacity-80 transition duration-300" onClick={() => setIsOpen(false)}>
-            {item}
+        {navItems.map((item) => (
+          <Link key={item.label} href={item.path} className="text-white hover:opacity-80 transition duration-300" onClick={() => setIsOpen(false)}>
+            {item.label}
           </Link>
         ))}
 
         {/* CTA Button for Mobile */}
         <Button href="https://play.google.com/store/apps/details?id=your-app-id" ariaLabel="Download the PurpleDry App">
-          Download App
+          Book Demo
         </Button>
       </div>
     </nav>

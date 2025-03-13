@@ -68,7 +68,7 @@ export default function Home() {
           Hassle-free, professional ironing service tailored for gated communities. Schedule pickups, track orders, and enjoy crisp, neatly pressed clothes—delivered to your doorstep with just a tap!
         </p>
         <Button href="https://play.google.com/store/apps/details?id=your-app-id" ariaLabel="Download the PurpleDry App">
-          Download App
+          Book Service
         </Button>
       </section>
 
@@ -82,7 +82,7 @@ export default function Home() {
           className="w-[500px] aspect-square"
         />
         <Button href="https://play.google.com/store/apps/details?id=com.phonepe.app" className="mt-6 bg-white! text-primary! hover:text-white! hover:bg-primary! hover:outline-white! outline-1" ariaLabel="Become a PurpleDry Partner">
-          Download App
+          Book Service
         </Button>
       </section>
 
